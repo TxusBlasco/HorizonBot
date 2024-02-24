@@ -1,0 +1,4 @@
+horizon_europe:
+  interactor: selenium
+  browser: chrome  # firefox and edge are also available
+  start_page: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search

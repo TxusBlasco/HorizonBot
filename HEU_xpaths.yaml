@@ -1,0 +1,55 @@
+cookies:
+  only_essentials: //a[.="Accept only essential cookies"]
+  close: //span[@class="wt-ecl-button__label" and contains(text(), " Close")]
+funding_tenders:
+  iframe: //iframe
+  tenders: //label[@for="tenders"]
+  nb_grants: //strong[@class="ng-star-inserted"]
+  expand_hide_all: //button[@euitooltip="Expand / hide all"]
+  items_found:
+    title: //tr[%s]//a/strong
+    id: //tr[%s]//eui-card-header-subtitle/span[@class="ng-star-inserted"]
+    funding_type: //tr[%s]//eui-card-header-subtitle/span[@class="eui-u-color-black eui-u-font-bold ml-3 ng-star-inserted"]
+    program: //tr[%s]//div[@class="eui-u-color-black mt-1 ng-star-inserted"]
+    status: //tr[%s]//eui-card-header-right-content//sedia-project-status//span[@class="eui-u-text-nowrap eui-label"]
+    grant_or_tender: //tr[%s]//eui-card-header-right-content/div/eui-chip/mat-basic-chip/div[@class="eui-chip__content-container"]
+    topic: //tr[%s]//eui-card-content//div/div[1]/div[2]
+    deadline_model: //tr[%s]//eui-card-content//div[@class="row"]/div[1]/div[4]
+    opening_date: //tr[%s]//eui-card-content//div[@class="row"]/div[2]/div[2]
+    closing_date: //tr[%s]//eui-card-content//div[@class="row"]/div[2]/div[4]
+  deploy_content_btn: //tr[%s]//button
+  programming_period:
+    2021_2027: //option[@value="2021 - 2027"]
+  program_group:
+    field: //eui-autocomplete[@id="frameworkProgramme"]
+    heu: //div[contains(text(), "Horizon Europe (HORIZON)")]
+  program_part:
+    erc: //span[.=" European Research Council (ERC) "]
+    msca: //span[.=" Marie Skłodowska-Curie Actions (MSCA) "]
+    infra: //span[.=" Research infrastructures "]
+    health: //span[.=" Health "]
+    culture: //span[.=" Culture, creativity and inclusive society "]
+    civil: //span[.=" Civil Security for Society "]
+    digital: //span[.=" Digital, Industry and Space "]
+    climate: //span[.=" Climate, Energy and Mobility "]
+    food: //span[.=" Food, Bioeconomy Natural Resources, Agriculture and Environment "]
+    eic: //span[.=" The European Innovation Council (EIC) "]
+    innovative: //span[.=" European innovation ecosystems "]
+    eit: //span[.=" The European Institute of Innovation and Technology (EIT) "]
+    widening: //span[.=" Widening participation and spreading excellence "]
+    reforming:  //span[.=" Reforming and enhancing the European R&I System "]
+  sort_by:
+    field: //select[@id="sortBy"]
+    opening_date: //option[contains(text(), "Opening date / Publication date")]
+    sort: //span[@class="eui-icon eui-icon-arrow-down"]
+    sort_inv: //span[@class="eui-icon eui-icon-arrow-up"]
+  items_per_page:
+    btn: //div[contains(text(), "Items per page")]//button/span
+    fifty: //div[@role="list-item" and .="50"]
+    next: //span[@aria-label="Go to next page"]
+    next_disabled: //div[@class="eui-table-paginator__page-navigation-item"][4]/button[@disabled="disabled"]
+    grant_list: //tbody/tr
+
+
+
+
