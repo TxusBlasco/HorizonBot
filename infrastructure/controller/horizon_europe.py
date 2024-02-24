@@ -1,13 +1,12 @@
 from application.services import get_grants_by_program as grants
 import time
+import json
 
 subscriptions = {'digital': True}
 #new = grants.HorizonEurope(subscriptions, 354).get_new_grants()
 #print(new)
-grant_ids = grants.HorizonEurope(subscriptions, 354).get_all_grant_details()
-for elem in grant_ids:
-	print(elem)
-print(len(grant_ids))
+grants = grants.HorizonEurope(subscriptions, 354).get_added_deleted()
+print(json.dumps(grants, indent=4))
 
 
 """from selenium import webdriver

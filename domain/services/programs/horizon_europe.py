@@ -149,7 +149,6 @@ class Steps:
 		grant seven and so on.
 		:return: a dictionary of grant elements in keys and corresponding grant element text in values
 		"""
-		print(_xpaths.items())
 		grant = dict(map(lambda x: (x[0], self.interactor.get_text(x[1] % nb)['text']), _xpaths.items()))
 		return grant
 
@@ -264,7 +263,7 @@ class Grants:
 			next_disabled=self.xpaths['funding_tenders']['items_per_page']['next_disabled'])
 		return grant_ids
 
-	def get_all_grant_details(self):
+	def get_all_grant_details(self) -> list[dict]:
 		self.steps.go_to_funding_opportunities_page(self.url)
 		self.steps.close_cookies(
 			only_essential=self.xpaths['cookies']['only_essentials'],
